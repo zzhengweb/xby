@@ -1,0 +1,18 @@
+{
+	"success": true,
+	"data": {
+		"bannerImg":[{
+			"id":"1",
+			"imgUrl":"images/banner/1.jpg"
+		},{
+			"id":"2",
+			"imgUrl":"images/banner/2.jpg"
+		},{
+			"id":"3",
+			"imgUrl":"images/banner/3.jpg"
+		},{
+			"id":"4",
+			"imgUrl":"images/banner/4.jpg"
+		}]
+	}
+}
