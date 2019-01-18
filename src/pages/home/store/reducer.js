@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {fromJS} from 'immutable';
 import * as actionTypes from './actionTypes';
 
@@ -30,3 +31,15 @@ export default (state=defaultState,action) => {
             return state
     }
 }
+||||||| merged common ancestors
+=======
+import {fromJS} from 'immutable';
+
+const defaultState = fromJS({
+    bannerImg:[]
+})
+
+export default (state=defaultState,action) => {
+    return state
+}
+>>>>>>> origin/master

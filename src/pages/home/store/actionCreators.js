@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import axios from 'axios';
 import {fromJS} from 'immutable';
 import * as actionTypes from './actionTypes';
@@ -32,3 +33,16 @@ export const getBannerList = () => {
 		})
     }
 }
+||||||| merged common ancestors
+=======
+import axios from 'axios';
+
+export const getBannerList = () => {
+    return (dispatch) => {
+        axios.get('/api/banner.json').then((res) => {
+			const data = res.data.data;
+			dispatch(data);
+		})
+    }
+}
+>>>>>>> origin/master
