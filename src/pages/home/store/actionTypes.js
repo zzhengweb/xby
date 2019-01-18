@@ -1,0 +1,1 @@
+export const GET_BANNER_LIST = 'HOME/GET_BANNER_LIST';
