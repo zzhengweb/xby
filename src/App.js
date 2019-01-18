@@ -3,7 +3,7 @@ import Header from './common/header';
 import Home from './pages/home';
 import './App.css';
 import { BrowserRouter,Route } from 'react-router-dom';
-import {GlobalStyle} from './style';
+import {GlobalStyle} from './static/iconfont/iconfont';
 import {Provider} from 'react-redux';
 import store from './store';
 

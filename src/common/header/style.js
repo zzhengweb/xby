@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const HeaderWrapper = styled.div`
-    width:1200px;
+    max-width:1200px;
     height:92px;
     margin:0 auto;
     line-height:92px;

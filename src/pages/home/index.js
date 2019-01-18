@@ -1,11 +1,13 @@
 import React,{ Component } from 'react';
 import Banner from './components/Banner';
+import Contact from './components/Contact';
 
 class Home extends Component {
     render () {
         return (
             <div>
                 <Banner />
+                <Contact/>
             </div>
         )
     }

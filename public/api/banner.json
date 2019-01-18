@@ -13,6 +13,8 @@
 		},{
 			"id":"4",
 			"imgUrl":"images/banner/4.jpg"
-		}]
+		}],
+		"wxImg":["images/pop-ewm.png"],
+		"adNavImg":["images/khzx-01.jpg"]
 	}
 }
