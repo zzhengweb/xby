@@ -1,1 +1,11 @@
+<<<<<<< HEAD
 @import '~antd/dist/antd.css';
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+body{
+    min-width:1200px;
+}
+||||||| merged common ancestors
+=======
+@import '~antd/dist/antd.css';
+>>>>>>> origin/master
