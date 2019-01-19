@@ -1,13 +1,9 @@
-<<<<<<< HEAD
+
 import React,{ Component } from 'react';
 import Banner from './components/Banner';
-<<<<<<< HEAD
+import Contact from './components/Contact';
 import { connect } from 'react-redux';
 import { actionCreators } from './store';
-||||||| merged common ancestors
-=======
-import Contact from './components/Contact';
->>>>>>> origin/master
 
 class Home extends Component {
     render () {
@@ -24,7 +20,6 @@ class Home extends Component {
     }
 }
 
-<<<<<<< HEAD
 const mapDispatch = (dispatch) => ({
     getBanner(){
         dispatch(actionCreators.getBannerList())
@@ -32,25 +27,3 @@ const mapDispatch = (dispatch) => ({
 })
 
 export default connect(null, mapDispatch)(Home);
-||||||| merged common ancestors
-export default Home;
-=======
-export default Home;
-||||||| merged common ancestors
-=======
-import React,{ Component } from 'react';
-import Banner from './components/Banner';
-
-class Home extends Component {
-    render () {
-        return (
-            <div>
-                <Banner />
-            </div>
-        )
-    }
-}
-
-export default Home;
->>>>>>> origin/master
->>>>>>> origin/master

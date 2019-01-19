@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import * as actionTypes from './actionTypes';
 import { fromJS } from 'immutable';
-||||||| merged common ancestors
-=======
-<<<<<<< HEAD
 import axios from 'axios';
-import {fromJS} from 'immutable';
-import * as actionTypes from './actionTypes';
 
 const getBannerAction = (data) => {
     return {
@@ -38,25 +32,3 @@ export const getBannerList = () => {
 		})
     }
 }
-||||||| merged common ancestors
-=======
->>>>>>> origin/master
-import axios from 'axios';
-
-const getBannerAction = (data) => ({
-    type:actionTypes.GET_BANNER_LIST,
-    data:fromJS(data)
-})
-
-export const getBannerList = () => {
-    return (dispatch) => {
-        axios.get('/api/banner.json').then((res) => {
-            const data = res.data.data;
-            console.log(data);
-			dispatch(getBannerAction(data));
-		}).catch(() => {
-			console.log('error');
-		})
-    }
-}
->>>>>>> origin/master
