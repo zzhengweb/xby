@@ -7,7 +7,8 @@ const defaultState = fromJS({
     wxShow:false,
     wxMoveOut:false,
     wxImg:'',
-    adNavImg:''
+    adNavImg:'',
+    travel:[]
 })
 
 export default (state=defaultState,action) => {
@@ -27,6 +28,8 @@ export default (state=defaultState,action) => {
             return state.set('wxShow',false)
         case actionTypes.MAKE_WX_OUT:
             return state.set('wxMoveOut',false)
+        case actionTypes.GET_SHOW_ACTION:
+            return state.set('travel',action.list)
         default:
             return state
     }

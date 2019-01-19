@@ -11,6 +11,11 @@ const getBannerAction = (data) => {
     }
 }
 
+const getShowAction = (data) => ({
+    type:actionTypes.GET_SHOW_ACTION,
+    list:fromJS(data)
+})
+
 export const makeWxShow = () => ({
     type:actionTypes.MAKE_WX_SHOW
 })
@@ -29,6 +34,16 @@ export const getBannerList = () => {
             const data = res.data.data;
             // console.log(data);
 			dispatch(getBannerAction(data));
+		})
+    }
+}
+
+export const getTravelShow = () => {
+    return (dispatch) => {
+        axios.get('/api/home-place.json').then((res) => {
+            const data = res.data.data;
+            // console.log(data);
+			dispatch(getShowAction(data));
 		})
     }
 }

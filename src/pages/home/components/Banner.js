@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import Slider from 'react-slick';
 import {connect} from 'react-redux';
 import {actionCreators} from '../store';
-import { BannerWrapper,SampleNextArrow,SamplePrevArrow } from '../style'
+import { BannerWrapper } from '../style'
 
 class Banner extends Component {
   render () {
@@ -12,9 +12,7 @@ class Banner extends Component {
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
-      arrows:true,
-      nextArrow:<SampleNextArrow />,
-      prevArrow:<SamplePrevArrow />
+      arrows:true
     };
     return (
       <BannerWrapper>
