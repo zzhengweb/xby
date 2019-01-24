@@ -26,7 +26,7 @@ class Header extends Component {
 							<li><Link to="custom.asp">联系我们</Link ></li>
 						</HeaderNav>
 					</Col>
-				</Row>
+				</Row><div className="clearfix"></div>
 			</HeaderWrapper>
 		)
 	}

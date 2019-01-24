@@ -2,6 +2,29 @@ import styled from 'styled-components';
 import Next from './next.png'
 import Prev from './prev.png'
 
+const title = `
+    text-align:center;
+    .title-cn{
+        margin-top: 60px;
+        font-size: 36px;
+        color:#333;
+    }
+    .title-en{
+        font-size: 18px;
+        color: #ff459a;
+        font-weight:bold;
+    }
+    .title-content{
+        font-size: 14px;
+    }
+    .line{
+        width: 25px;
+        height: 1px;
+        background-color:#ff459a;
+        margin: 15px auto;
+    }
+`
+
 export const OtherWrapper = styled.div`
     width:1200px;
     margin:0 auto;
@@ -247,5 +270,152 @@ export const  LineItemOther = styled.div`
     .hotal,.num{
         display:inline-block;
         margin-right:15px;
+    }
+`
+
+export const  LineEntranceWrapper = styled.div`
+    width:1200px;
+    margin:30px auto;
+`
+
+export const  LineEntranceLeft = styled.div`
+    width:300px;
+    height:400px;
+    float:left;
+    background-image:url('/images/hot-line/adv.jpg');
+    background-size:cover;
+`
+
+export const  LineEntranceRight = styled.div`
+    width:900px;
+    height:400px;
+    float:left;
+    padding-left:20px;
+`
+
+export const  LineItem = styled.div`
+    width:220px;
+    height:200px;
+    float:left;
+    position:relative;
+    overflow:hidden;
+    img{
+        position:absolute;
+        width:100%;
+        height:100%;
+    }
+    .country{
+        position:absolute;
+        font-size: 18px;
+        color: white;
+        margin-top: 17px;
+        margin-left: 22px;
+    }
+    .hoverShow{
+        position:absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(253,63,159,0.8);
+        text-align: center;
+        color: white;
+        padding-top:15px;
+        display:none;
+        .title{
+            line-height:1.6;
+            font-size: 24px;
+        }
+        .content{
+            font-size: 12px;
+            line-height:2;
+            margin-top:15px;
+            padding:0 15px;
+        }
+        .whiteLine{
+            width: 36px;
+            height: 1px;
+            background-color:#ffffff;
+            margin: 15px auto;
+        }
+    }
+    &:hover{
+        .hoverShow{
+            display:block;
+        }
+        .country{
+            display:none;
+        }
+    }
+`
+export const FeatureWrapper = styled.div`
+    width:1200px;
+    margin:30px auto;
+    .feature-item-round{
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        background-color: #cbcbcb;
+        text-align: center;
+        line-height:96px;
+        img{
+            display:inline-block;
+        }
+        &:hover{
+            background-image: linear-gradient(0deg,#ff459a,#ed17c2);
+        }
+    }
+    .feature-item-other{
+        width: 280px;
+        height: 96px;
+        border-radius: 48px;
+        background-color: #cbcbcb;
+        padding-left:20px;
+        .icon{
+            height:96px;
+            line-height:96px;
+            float:left;
+            margin-right:15px;
+            img{
+                display:inline-block;
+            }
+        }
+        .num{
+            font-size:48px;
+            height:96px;
+            line-height:96px;
+            float:left;
+            color:white;
+            span{
+                font-size:16px;
+            }
+        }
+        &:hover{
+            background-image: linear-gradient(0deg,#ff459a,#ed17c2);
+        }
+    }
+`
+
+export const AdvantageWrapper = styled.div`
+    width:1200px;
+    margin:30px auto;
+`
+
+export const AdvantageTitle = styled.div`
+    ${title};
+`
+
+export const AdvantageText = styled.div`
+    text-align:center;
+    .icon{
+        .iconfont{
+            font-size:40px;
+            color:#ff459a;
+        }
+    }
+    .title{
+        font-size: 18px;
+    }
+    .content{
+        color: #999999;
+        padding: 0 15px;
     }
 `

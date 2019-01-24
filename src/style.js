@@ -45,4 +45,6 @@ export const GlobalStyle = createGlobalStyle`
 		border-collapse: collapse;
 		border-spacing: 0;
 	}
+	
+	.clearfix::before,.clearfix::after{content:'';clear: both;display: table;*zoom:1;}
 `;

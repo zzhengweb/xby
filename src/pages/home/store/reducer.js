@@ -8,7 +8,8 @@ const defaultState = fromJS({
     wxMoveOut:false,
     wxImg:'',
     adNavImg:'',
-    travel:[]
+    travel:[],
+    hotLine:[]
 })
 
 export default (state=defaultState,action) => {
@@ -30,6 +31,8 @@ export default (state=defaultState,action) => {
             return state.set('wxMoveOut',false)
         case actionTypes.GET_SHOW_ACTION:
             return state.set('travel',action.list)
+        case actionTypes.GET_LINE_ACTION:
+            return state.set('hotLine',action.list)
         default:
             return state
     }
