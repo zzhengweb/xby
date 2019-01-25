@@ -6,6 +6,7 @@ import HotLine from './components/HotLine';
 import LineEntrance from './components/LineEntrance';
 import Feature from './components/Feature';
 import Advantage from './components/Advantage';
+import LifeWall from './components/LifeWall';
 import { connect } from 'react-redux';
 import { actionCreators } from './store';
 
@@ -19,6 +20,7 @@ class Home extends Component {
                 <LineEntrance />
                 <Feature />
                 <Advantage />
+                <LifeWall />
             </div>
         )
     }
