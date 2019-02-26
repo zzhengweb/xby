@@ -9,7 +9,8 @@ const defaultState = fromJS({
     wxImg:'',
     adNavImg:'',
     travel:[],
-    hotLine:[]
+    hotLine:[],
+    comment:[]
 })
 
 export default (state=defaultState,action) => {
@@ -26,13 +27,15 @@ export default (state=defaultState,action) => {
                 wxMoveOut:true
             })
         case actionTypes.MAKE_WX_HIDE:
-            return state.set('wxShow',false)
+            return state.set('wxShow', false)
         case actionTypes.MAKE_WX_OUT:
-            return state.set('wxMoveOut',false)
+            return state.set('wxMoveOut', false)
         case actionTypes.GET_SHOW_ACTION:
-            return state.set('travel',action.list)
+            return state.set('travel', action.list)
         case actionTypes.GET_LINE_ACTION:
-            return state.set('hotLine',action.list)
+            return state.set('hotLine', action.list)
+        case actionTypes.GET_COMMENT:
+            return state.set('comment', action.list)
         default:
             return state
     }

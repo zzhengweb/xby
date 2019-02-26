@@ -6,7 +6,7 @@ const title = `
     text-align:center;
     .title-cn{
         margin-top: 60px;
-        font-size: 36px;
+        font-size: 30px;
         color:#333;
     }
     .title-en{
@@ -405,6 +405,7 @@ export const AdvantageTitle = styled.div`
 
 export const AdvantageText = styled.div`
     text-align:center;
+    margin-bottom:80px;
     .icon{
         .iconfont{
             font-size:40px;
@@ -448,30 +449,74 @@ export const LifeWallContainer = styled.div`
                 transform: rotate(14deg);
             }
             &.rollimg2{
-                transform: rotate(19deg);
+                transform: rotate(-8deg);
             }
             &.rollimg3{
                 transform: rotate(-25deg);
             }
             &.rollimg4{
-                transform: rotate(15deg);
+                transform: rotate(12deg);
             }
             &.rollimg5{
-                transform: rotate(18deg);
+                transform: rotate(-8deg);
             }
             &.rollimg6{
-                transform: rotate(26deg);
+                transform: rotate(18deg);
             }
             &.rollimg7{
                 transform: rotate(-16deg);
             }
             &.rollimg8{
-                transform: rotate(14deg);
+                transform: rotate(12deg);
             }
             &:hover{
                 transform: rotate(0deg);
                 width: 220px;
             }
+        }
+    }
+`
+
+export const CommentWrapper = styled.div`
+    width:1200px;
+    margin:30px auto;
+`
+
+export const CommentTitle = styled.div`
+    ${title};
+`
+
+export const CommentList = styled.div`
+    margin:30px auto;
+    .commentItem{
+        .commentImg{
+            cursor:pointer;
+            .img1{
+                display:block;
+            }
+            .img2{
+                display:none;
+            }
+            &:hover{
+                .img1{
+                    display:none;
+                }
+                .img2{
+                    display:block;
+                } 
+            }
+        }
+        .commentTitle{
+            font-size: 14px;
+            color: #66b7b4;
+            text-align: center;
+            margin-top: 24px;
+        }
+        .commentContent{
+            margin-top: 8px;
+            font-size: 14px;
+            line-height: 24px;
+            color: #333;
         }
     }
 `

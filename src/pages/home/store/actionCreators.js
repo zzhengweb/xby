@@ -21,6 +21,11 @@ const getLineAction = (data) => ({
     list:fromJS(data.line)
 })
 
+const getComentAction = (data) => ({
+    type: actionTypes.GET_COMMENT,
+    list: fromJS(data.comment)
+})
+
 export const makeWxShow = () => ({
     type:actionTypes.MAKE_WX_SHOW
 })
@@ -60,5 +65,14 @@ export const getHotLine = () => {
             // console.log(data);
 			dispatch(getLineAction(data));
 		})
+    }
+}
+
+export const getComment = () => {
+    return (dispatch) => {
+        axios.get('/api/comment.json').then((res) => {
+            const data = res.data.data;
+            dispatch(getComentAction(data));
+        })
     }
 }

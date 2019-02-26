@@ -7,6 +7,7 @@ import LineEntrance from './components/LineEntrance';
 import Feature from './components/Feature';
 import Advantage from './components/Advantage';
 import LifeWall from './components/LifeWall';
+import Comment from './components/Comment';
 import { connect } from 'react-redux';
 import { actionCreators } from './store';
 
@@ -21,6 +22,7 @@ class Home extends Component {
                 <Feature />
                 <Advantage />
                 <LifeWall />
+                <Comment />
             </div>
         )
     }
@@ -28,6 +30,7 @@ class Home extends Component {
         this.props.getBanner();
         this.props.getTrave();
         this.props.getHotList();
+        this.props.getCommentList();
     }
 }
 
@@ -40,6 +43,9 @@ const mapDispatch = (dispatch) => ({
     },
     getHotList(){
         dispatch(actionCreators.getHotLine())
+    },
+    getCommentList(){
+        dispatch(actionCreators.getComment())
     }
 })
 
