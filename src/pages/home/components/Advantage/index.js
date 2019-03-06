@@ -3,7 +3,7 @@ import {
     AdvantageWrapper,
     AdvantageTitle,
     AdvantageText
-} from '../style';
+} from './style';
 import {
     Row,
     Col

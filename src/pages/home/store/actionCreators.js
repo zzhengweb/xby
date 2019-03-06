@@ -76,3 +76,8 @@ export const getComment = () => {
         })
     }
 }
+
+export const changeNum = (n) => ({
+    type:actionTypes.CHANGE_NUM_ACTION,
+    num:n
+})

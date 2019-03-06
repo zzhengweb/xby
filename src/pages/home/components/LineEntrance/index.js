@@ -5,7 +5,7 @@ import {
     LineEntranceLeft,
     LineEntranceRight,
     LineItem
-} from '../style';
+} from './style';
 
 class LineEntrance extends Component {
     render () {

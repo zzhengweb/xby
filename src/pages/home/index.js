@@ -9,18 +9,25 @@ import LifeWall from './components/LifeWall';
 import Comment from './components/Comment';
 import { connect } from 'react-redux';
 import { actionCreators } from './store';
+import {
+    HomeWrapper
+} from './style';
 
 class Home extends Component {
     render () {
         return (
             <div>
-                <Contact />
-                <HotLine />
-                <LineEntrance />
-                <Feature />
-                <Advantage />
+                <HomeWrapper>
+                    <Contact />
+                    <HotLine />
+                    <LineEntrance />
+                    <Feature />
+                    <Advantage />
+                </HomeWrapper>
                 <LifeWall />
-                <Comment />
+                <HomeWrapper>
+                    <Comment num={3} />
+                </HomeWrapper>
             </div>
         )
     }

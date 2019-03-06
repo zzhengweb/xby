@@ -10,7 +10,8 @@ const defaultState = fromJS({
     adNavImg:'',
     travel:[],
     hotLine:[],
-    comment:[]
+    comment:[],
+    showNum:0
 })
 
 export default (state=defaultState,action) => {
@@ -36,6 +37,8 @@ export default (state=defaultState,action) => {
             return state.set('hotLine', action.list)
         case actionTypes.GET_COMMENT:
             return state.set('comment', action.list)
+        case actionTypes.CHANGE_NUM_ACTION:
+            return state.set('showNum', action.num)
         default:
             return state
     }

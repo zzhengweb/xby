@@ -1,13 +1,13 @@
 import React ,{ Component } from 'react';
 import {Col,Row} from 'antd';
 import { Link } from 'react-router-dom'
-import {actionCreators} from '../store';
+import {actionCreators} from '../../../store';
 import {
     OtherWrapper,
     CustonTrip,
     HotPhone,
     SafeBox
-} from '../style';
+} from './style';
 import { connect } from 'react-redux';
 
 class Contact extends Component {

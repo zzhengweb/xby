@@ -9,7 +9,7 @@ import {
   LineItemWay,
   LineItemPlaces,
   LineItemOther
-} from '../style';
+} from './style';
 import {connect} from 'react-redux'
 
 class HotLine extends Component {

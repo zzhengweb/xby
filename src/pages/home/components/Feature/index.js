@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {
     FeatureWrapper
-} from '../style';
+} from './style';
 import {
     Row,
     Col

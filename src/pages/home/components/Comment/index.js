@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-// import {actionCreators} from '../store';
+import {actionCreators} from '../../../store';
 import {
     CommentWrapper,
     CommentTitle,
     CommentList
-} from "../style";
+} from "./style";
 import {
     Row,
     Col
@@ -14,8 +14,8 @@ import {
 class Comment extends Component {
 
   getTopList () {
-    const { list } = this.props;
-    var topList = list.slice(0,3);
+    const { list,showNum } = this.props;
+    var topList = list.slice(0,showNum);
     return (
       topList.map((item) => {
         return (
@@ -42,17 +42,31 @@ class Comment extends Component {
           <div className="line"></div>
         </CommentTitle>
         <CommentList className="gutter-example">
-          <Row gutter={16}>
+          <Row type="flex" justify="space-between">
             {this.getTopList()}
           </Row>
         </CommentList>
       </CommentWrapper>
     )
   }
+
+  componentDidMount () {
+    const { num } = this.props;
+    this.props.handleChangeNum(num)
+  }
 }
 
 const mapState = (state) => ({
-  list: state.getIn(['banner','comment'])
+  list: state.getIn(['banner','comment']),
+  showNum: state.getIn(['banner','showNum'])
 })
 
-export default connect(mapState,null)(Comment);
+const mapDispatch = (dispatch)  => {
+  return {
+    handleChangeNum (n) {
+      dispatch(actionCreators.changeNum(n));
+    }
+  }
+}
+
+export default connect(mapState,mapDispatch)(Comment);
