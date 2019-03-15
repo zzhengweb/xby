@@ -5,6 +5,7 @@ import Footer from './common/footer';
 import Home from './pages/home';
 import Flow from './pages/flow';
 import Evaluation from './pages/evaluation';
+import Introduction from './pages/introduction';
 import './App.css';
 import { BrowserRouter,Route } from 'react-router-dom';
 import {GlobalStyle} from './static/iconfont/iconfont';
@@ -24,6 +25,7 @@ class App extends Component {
               <Route exact path="/" component={Home} />
               <Route exact path="/flow" component={Flow} />
               <Route exact path="/evaluation" component={Evaluation} />
+              <Route exact path="/introduction" component={Introduction} />
               <Route path="/" component={Footer} />
             </div>
           </BrowserRouter>

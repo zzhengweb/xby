@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import Slider from 'react-slick';
 import {connect} from 'react-redux';
-import {actionCreators} from '../../../store';
+import {actionCreators} from '../../store';
 import { BannerWrapper } from './style'
 
 class Banner extends Component {

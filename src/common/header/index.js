@@ -19,11 +19,11 @@ class Header extends Component {
 					<Col span={12}>
 						<HeaderNav>
 							<li><Link to="/">首页</Link ></li>
-							<li><Link to="flow">定制流程</Link ></li>
-							<li><Link to="evaluation">顾客评价</Link ></li>
-							<li><Link to="about">关于CHINESPAIN</Link ></li>
-							<li><Link to="consultant">旅行攻略</Link ></li>
-							<li><Link to="custom">联系我们</Link ></li>
+							<li><Link to="/flow">定制流程</Link ></li>
+							<li><Link to="/evaluation">顾客评价</Link ></li>
+							<li><Link to="/introduction">关于CHINESPAIN</Link ></li>
+							<li><Link to="/consultant">旅行攻略</Link ></li>
+							<li><Link to="/custom">联系我们</Link ></li>
 						</HeaderNav>
 					</Col>
 				</Row><div className="clearfix"></div>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Comment from '../home/components/Comment';
+import PageNav from '../../common/pagenav';
 import {
     EvaluationWrapper
 } from './style';
@@ -10,6 +11,7 @@ class Evaluation extends Component {
     render () {
         return (
             <EvaluationWrapper>
+                <PageNav page="/evaluation" content="顾客评价" />
                 <Comment />
             </EvaluationWrapper>
         )

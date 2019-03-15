@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import {actionCreators} from '../../../store';
+import {actionCreators} from '../../store';
 import {
     CommentWrapper,
     CommentTitle,
