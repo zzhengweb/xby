@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import {
     LineEntranceWrapper,
@@ -7,7 +7,7 @@ import {
     LineItem
 } from './style';
 
-class LineEntrance extends Component {
+class LineEntrance extends PureComponent {
     render () {
         const { list } = this.props;
         return (
@@ -37,7 +37,7 @@ class LineEntrance extends Component {
 }
 
 const mapState = (state) => ({
-    list: state.getIn(['banner','hotLine'])
+    list: state.getIn(['home','hotLine'])
 })
 
 export default connect(mapState,null)(LineEntrance);

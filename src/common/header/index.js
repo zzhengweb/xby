@@ -1,4 +1,4 @@
-import React,{ Component } from 'react';
+import React,{ PureComponent } from 'react';
 import { Row, Col } from 'antd';
 import {
 	HeaderWrapper,
@@ -8,7 +8,7 @@ import {
 import logoUrl from './images/logo.png';
 import { Link } from 'react-router-dom';
 
-class Header extends Component {
+class Header extends PureComponent {
 	render(){
 		return(
 			<HeaderWrapper>
@@ -23,7 +23,7 @@ class Header extends Component {
 							<li><Link to="/evaluation">顾客评价</Link ></li>
 							<li><Link to="/introduction">关于CHINESPAIN</Link ></li>
 							<li><Link to="/consultant">旅行攻略</Link ></li>
-							<li><Link to="/custom">联系我们</Link ></li>
+							<li><Link to="/">联系我们</Link ></li>
 						</HeaderNav>
 					</Col>
 				</Row><div className="clearfix"></div>

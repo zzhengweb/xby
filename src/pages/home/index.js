@@ -1,5 +1,5 @@
 
-import React,{ Component } from 'react';
+import React,{ PureComponent } from 'react';
 import Contact from './components/Contact';
 import HotLine from './components/HotLine';
 import LineEntrance from './components/LineEntrance';
@@ -13,7 +13,7 @@ import {
     HomeWrapper
 } from './style';
 
-class Home extends Component {
+class Home extends PureComponent {
     render () {
         return (
             <div>
@@ -32,17 +32,14 @@ class Home extends Component {
         )
     }
     componentDidMount(){
-        this.props.getBanner();
         this.props.getTrave();
         this.props.getHotList();
         this.props.getCommentList();
+        this.props.getContactImg();
     }
 }
 
 const mapDispatch = (dispatch) => ({
-    getBanner(){
-        dispatch(actionCreators.getBannerList())
-    },
     getTrave(){
         dispatch(actionCreators.getTravelShow())
     },
@@ -51,6 +48,9 @@ const mapDispatch = (dispatch) => ({
     },
     getCommentList(){
         dispatch(actionCreators.getComment())
+    },
+    getContactImg() {
+        dispatch(actionCreators.getContact())
     }
 })
 

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import {
     FeatureWrapper
 } from './style';
@@ -7,7 +7,7 @@ import {
     Col
 } from 'antd';
 
-class Feature extends Component {
+class Feature extends PureComponent {
     render () {
         return (
             <FeatureWrapper>

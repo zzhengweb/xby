@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PageNav from '../../common/pagenav';
 import { 
   FlowWrapper,
@@ -11,7 +11,7 @@ import {
   Col
 } from 'antd';
 
-class Flow extends Component {
+class Flow extends PureComponent {
   render () {
     return (
       <FlowWrapper>

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PageNav from '../../common/pagenav';
 import {
     Row,
@@ -12,14 +12,15 @@ import {
     IntroLeftTitle,
     IntroLeftP,
     IntroLeftGrayBox,
-    IntroLeftServer
+    IntroLeftServer,
+    IntroLeftActivity
 } from './style';
 import {
     FlowBody,
     AdvantageText
 } from './style';
 
-class Introduction extends Component {
+class Introduction extends PureComponent {
     render(){
         return (
             <IntroWrapper>
@@ -111,6 +112,31 @@ class Introduction extends Component {
                                         </Col>
                                     </Row>
                                 </IntroLeftServer>
+                                <IntroLeftActivity>
+                                    <h4>以下是公司员工为客户精心准备的过程：</h4>
+                                    <img src="images/introduction/1.jpg" alt="" />
+                                    <h5>公司准备的马德里卡，用途多多哦</h5>
+                                    <img src="images/introduction/2.jpg" alt="" />
+                                    <h5>各类旅游讯息</h5>
+                                    <img src="images/introduction/3.jpg" alt="" />
+                                    <h5>免费赠送的Wi-Fi设备</h5>
+                                    <img src="images/introduction/4.jpg" alt="" />
+                                    <h5>为客户定制游准备的，带我们亲手特殊标识过的地图</h5>
+                                    <img src="images/introduction/5.jpg" alt="" />
+                                    <h5>和供应商联系中的中国同事</h5>
+                                    <img src="images/introduction/6.jpg" alt="" />
+                                    <h5>后附上来自客户的旅行照片，看着他们满满的幸福，好生羡慕。</h5>
+                                </IntroLeftActivity>
+                                <IntroLeftTitle>服务宗旨</IntroLeftTitle>
+                                <IntroLeftP>我们的合作伙伴为我们提供最好的体验项目，每一个体验项目都经过我们精心挑选并经过严格审核。这为客人提供最优质的服务打下了优良的基础。</IntroLeftP>
+                                <IntroLeftP>每一个合作伙伴都有或多或少中国的文化和习俗，优先服务和满足我们的顾客需求。并且和我们一起提供更多更丰富的奢华体验和与众不同的个性化服务</IntroLeftP>
+                                <IntroLeftActivity>
+                                    <img src="images/introduction/7.jpg" alt="" />
+                                </IntroLeftActivity>
+                                <IntroLeftTitle>Chinespain 联盟</IntroLeftTitle>
+                                <IntroLeftActivity>
+                                    <img src="images/introduction/8.jpg" alt="" />
+                                </IntroLeftActivity>
                             </IntroLeftBody>
                         </IntroLeft>
                         <IntroRight></IntroRight>

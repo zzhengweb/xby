@@ -1,4 +1,4 @@
-import React ,{ Component } from 'react';
+import React ,{ PureComponent } from 'react';
 import {Col,Row} from 'antd';
 import { Link } from 'react-router-dom'
 import {actionCreators} from '../../store';
@@ -10,7 +10,7 @@ import {
 } from './style';
 import { connect } from 'react-redux';
 
-class Contact extends Component {
+class Contact extends PureComponent {
     getWxShow () {
         const {wxShow,wxImg,wxMoveOut,handleImgOut} = this.props;
         if(wxShow||wxMoveOut){
@@ -59,10 +59,10 @@ class Contact extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        wxShow:state.getIn(['banner','wxShow']),
-        wxMoveOut:state.getIn(['banner','wxMoveOut']),
-        wxImg: state.getIn(['banner','wxImg']),
-        adNavImg:state.getIn(['banner','adNavImg'])
+        wxShow: state.getIn(['home','wxShow']),
+        wxMoveOut: state.getIn(['home','wxMoveOut']),
+        wxImg: state.getIn(['home','wxImg']),
+        adNavImg: state.getIn(['home','adNavImg'])
     }
 }
 

@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { Nav } from './style';
 import { Link } from 'react-router-dom';
 
-class PageNav extends Component{
+class PageNav extends PureComponent{
     render () {
         const {page,content} = this.props;
         return (

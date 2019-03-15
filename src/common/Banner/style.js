@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import Next from '../../next.png';
-import Prev from '../../prev.png';
+import Next from '.././../pages/home/next.png';
+import Prev from '.././../pages/home/prev.png';
 
 export const BannerWrapper = styled.div`
     width:100%;

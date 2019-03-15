@@ -1,10 +1,10 @@
-import React,{Component} from 'react';
+import React,{ PureComponent } from 'react';
 import Slider from 'react-slick';
-import {connect} from 'react-redux';
-import {actionCreators} from '../../store';
+import { connect } from 'react-redux';
+import { actionCreators } from './store';
 import { BannerWrapper } from './style'
 
-class Banner extends Component {
+class Banner extends PureComponent {
   render () {
     const {list} = this.props;
     let settings = {
@@ -31,7 +31,7 @@ class Banner extends Component {
   }
 
   componentDidMount(){
-    this.props.getBanner()
+    this.props.getBanner();
   }
 }
 
@@ -44,7 +44,7 @@ const mapState = (state) => {
 const mapDispatch = (dispatch) => {
   return {
     getBanner(){
-      dispatch(actionCreators.getBannerList())
+      dispatch(actionCreators.getBannerList());
     }
   }
 }

@@ -1,4 +1,4 @@
-import React,{ Component } from 'react';
+import React,{ PureComponent } from 'react';
 import {
     LifeWallWrapper,
     LifeWallContainer
@@ -8,7 +8,7 @@ import {
     Col
 } from 'antd';
 
-class LifeWall extends Component {
+class LifeWall extends PureComponent {
     render () {
         return (
             <LifeWallWrapper>

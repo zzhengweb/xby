@@ -2,18 +2,15 @@ import * as actionTypes from './actionTypes';
 import { fromJS } from 'immutable';
 import axios from 'axios';
 
-const getBannerAction = (data) => {
-    return {
-        type:actionTypes.GTE_BANNER_LIST,
-        data:fromJS(data.bannerImg),
-        wxImg:fromJS(data.wxImg[0]),
-        adNavImg:fromJS(data.adNavImg[0])
-    }
-}
-
 const getShowAction = (data) => ({
     type:actionTypes.GET_SHOW_ACTION,
     list:fromJS(data)
+})
+
+const getContacteAction = (data) => ({
+    type:actionTypes.GTE_CONTACT_LIST,
+    wxImg:fromJS(data.wxImg[0]),
+    adNavImg:fromJS(data.adNavImg[0])
 })
 
 const getLineAction = (data) => ({
@@ -38,16 +35,6 @@ export const makeWxOut = () => ({
     type:actionTypes.MAKE_WX_OUT
 })
 
-export const getBannerList = () => {
-    return (dispatch) => {
-        axios.get('/api/banner.json').then((res) => {
-            const data = res.data.data;
-            // console.log(data);
-			dispatch(getBannerAction(data));
-		})
-    }
-}
-
 export const getTravelShow = () => {
     return (dispatch) => {
         axios.get('/api/home-place.json').then((res) => {
@@ -64,6 +51,15 @@ export const getHotLine = () => {
             const data = res.data.data;
             // console.log(data);
 			dispatch(getLineAction(data));
+		})
+    }
+}
+
+export const getContact = () => {
+    return (dispatch) => {
+        axios.get('/api/banner.json').then((res) => {
+            const data = res.data.data;
+			dispatch(getContacteAction(data));
 		})
     }
 }

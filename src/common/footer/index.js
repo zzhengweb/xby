@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import {
     FooterWrapper,
     FooterContainer,
@@ -10,7 +10,7 @@ import {
 } from 'antd';
 import { Link } from 'react-router-dom';
 
-class Footer extends Component {
+class Footer extends PureComponent {
   render () {
     return (
       <FooterWrapper>

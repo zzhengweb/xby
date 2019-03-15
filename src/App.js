@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import Header from './common/header';
-import Banner from './pages/home/components/Banner';
+import Banner from './common/Banner';
 import Footer from './common/footer';
 import Home from './pages/home';
 import Flow from './pages/flow';
 import Evaluation from './pages/evaluation';
 import Introduction from './pages/introduction';
+import Detail from './pages/detail';
 import './App.css';
 import { BrowserRouter,Route } from 'react-router-dom';
-import {GlobalStyle} from './static/iconfont/iconfont';
-import {Provider} from 'react-redux';
+import { GlobalStyle } from './static/iconfont/iconfont';
+import { Provider } from 'react-redux';
 import store from './store';
 
 class App extends Component {
@@ -21,11 +22,12 @@ class App extends Component {
           <BrowserRouter>
             <div>
               <Route path="/" component={Header} />
-              <Route path="/" component={Banner } />
+              <Route path="/" component={Banner} />
               <Route exact path="/" component={Home} />
-              <Route exact path="/flow" component={Flow} />
-              <Route exact path="/evaluation" component={Evaluation} />
-              <Route exact path="/introduction" component={Introduction} />
+              <Route path="/flow" component={Flow} />
+              <Route path="/evaluation" component={Evaluation} />
+              <Route path="/introduction" component={Introduction} />
+              <Route path="/Detail/:id" component={Detail} />
               <Route path="/" component={Footer} />
             </div>
           </BrowserRouter>

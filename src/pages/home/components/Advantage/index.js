@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import {
     AdvantageWrapper,
     AdvantageTitle,
@@ -9,7 +9,7 @@ import {
     Col
 } from 'antd';
 
-class Advantage extends Component {
+class Advantage extends PureComponent {
     render () {
         return (
             <AdvantageWrapper>

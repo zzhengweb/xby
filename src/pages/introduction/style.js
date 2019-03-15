@@ -20,7 +20,7 @@ export const IntroLeftTitle = styled.div`
 `
 
 export const IntroLeftBody = styled.div`
-    padding:15px;
+    padding:15px 30px;
 `
 
 
@@ -120,9 +120,22 @@ export const IntroLeftServer = styled.div`
     }
 `
 
-// export const IntroRight = styled.div`
-    
-// `
+export const IntroLeftActivity = styled.div`
+    text-align:center;
+    margin-top:30px;
+    h4{
+        font-size:18px;
+        margin-bottom:15px;
+    }
+    img{
+        max-width:768px;
+        margin-bottom:15px;
+    }
+    h5{
+        font-size:14px;
+        margin-bottom:15px;
+    }
+`
 
 // export const IntroRight = styled.div`
     

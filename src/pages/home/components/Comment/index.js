@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import { connect } from "react-redux";
 import {actionCreators} from '../../store';
 import {
@@ -11,7 +11,7 @@ import {
     Col
 } from 'antd';
 
-class Comment extends Component {
+class Comment extends PureComponent {
 
   getTopList () {
     const { list,showNum } = this.props;
@@ -57,8 +57,8 @@ class Comment extends Component {
 }
 
 const mapState = (state) => ({
-  list: state.getIn(['banner','comment']),
-  showNum: state.getIn(['banner','showNum'])
+  list: state.getIn(['home','comment']),
+  showNum: state.getIn(['home','showNum'])
 })
 
 const mapDispatch = (dispatch)  => {
