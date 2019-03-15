@@ -8,7 +8,7 @@ import Evaluation from './pages/evaluation';
 import Introduction from './pages/introduction';
 import Detail from './pages/detail';
 import './App.css';
-import { BrowserRouter,Route } from 'react-router-dom';
+import { HashRouter,Route } from 'react-router-dom';
 import { GlobalStyle } from './static/iconfont/iconfont';
 import { Provider } from 'react-redux';
 import store from './store';
@@ -19,7 +19,7 @@ class App extends Component {
       <Provider store={store}>
         <div className="App">
           <GlobalStyle />
-          <BrowserRouter>
+          <HashRouter>
             <div>
               <Route path="/" component={Header} />
               <Route path="/" component={Banner} />
@@ -30,7 +30,7 @@ class App extends Component {
               <Route path="/Detail/:id" component={Detail} />
               <Route path="/" component={Footer} />
             </div>
-          </BrowserRouter>
+          </HashRouter>
         </div>
       </Provider>
     );
