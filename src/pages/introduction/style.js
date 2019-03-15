@@ -8,6 +8,7 @@ export const IntroWrapper = styled.div`
 
 export const IntroLeft = styled.div`
     box-shadow:0 0 2px #cccccc;
+    margin-top:15px;
     .top{
         width:100%;
     }
