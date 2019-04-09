@@ -26,6 +26,7 @@ import {
     Row,
     Col
 } from 'antd';
+import { actionCreators } from './store';
 
 class Detail extends PureComponent {
     render () {
@@ -207,8 +208,17 @@ class Detail extends PureComponent {
     }
 
     componentDidMount() {
-		console.log(this.props.match.params.id);
+        console.log(this.props.match.params.id);
+        this.props.getDetail();
 	}
 }
 
-export default connect(null,null)(withRouter(Detail));
+const mapDispatch = (dispatch) => {
+    return {
+        getDetail(){
+            dispatch(actionCreators.get_detail())
+        }
+    }
+}
+
+export default connect(null,mapDispatch)(withRouter(Detail));

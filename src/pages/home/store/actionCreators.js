@@ -39,7 +39,6 @@ export const getTravelShow = () => {
     return (dispatch) => {
         axios.get('/api/home-place.json').then((res) => {
             const data = res.data.data;
-            // console.log(data);
 			dispatch(getShowAction(data));
 		})
     }
@@ -49,7 +48,6 @@ export const getHotLine = () => {
     return (dispatch) => {
         axios.get('/api/hotLine.json').then((res) => {
             const data = res.data.data;
-            // console.log(data);
 			dispatch(getLineAction(data));
 		})
     }
