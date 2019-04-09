@@ -97,38 +97,108 @@ class Detail extends PureComponent {
                         </DetailDaysTotal>
                         <DetailActivity>
                             <div className="line"></div>
-                            <DetailPlace><div className="daysItem">D1</div><div className="name">马德里</div></DetailPlace>
-                            <DeatilEveryContent>整个马德里行程就从市中心太阳门广场SOL开始，太阳门广场是马德里的中心。参观完太阳门广场后我们继续前往马约尔广场无疑是最有广场范儿的。步行一刻钟到，马德里皇宫与阿穆德纳圣母主教座堂。吃完了午上后我们重新踏马德里探索之旅，前往我们的下一个目的地Gran Vía大道以及Callao广场。</DeatilEveryContent>
-                            <Row gutter={24} type="flex">
-                                <Col span={12}>
-                                    <DetailActivitySpot>
-                                        <img src="http://cnd.05121818.com/1cfebcf7-10da-4e68-b78e-d3d72f9a53db.jpg" alt="" />
-                                        <h5>太阳门广场</h5>
-                                        <p>太阳门广场是马德里的中心。最初太阳门广场旁有一个太阳门，因为它面向太阳升起的地方，所以取名为太阳门。</p>
-                                    </DetailActivitySpot>
-                                </Col>
-                                <Col span={12}>
-                                    <DetailActivitySpot>
-                                        <img src="http://cnd.05121818.com/b9ef10cd-810c-4405-9845-b9ee1085f057.jpg" alt="" />
-                                        <h5>马约尔广场</h5>
-                                        <p>在西班牙众多广场中，马约尔广场无疑是最有广场范儿的。</p>
-                                    </DetailActivitySpot>
-                                </Col>
-                                <Col span={12}>
-                                    <DetailActivitySpot>
-                                        <img src="http://cnd.05121818.com/1cfebcf7-10da-4e68-b78e-d3d72f9a53db.jpg" alt="" />
-                                        <h5>马德里皇宫</h5>
-                                        <p>该皇宫是仅次于凡尔赛宫和维也纳美泉宫的欧洲第三大皇宫，是世界上保存最完整而且最精美的宫殿之一。</p>
-                                    </DetailActivitySpot>
-                                </Col>
-                                <Col span={12}>
-                                    <DetailActivitySpot>
-                                        <img src="http://cnd.05121818.com/b9ef10cd-810c-4405-9845-b9ee1085f057.jpg" alt="" />
-                                        <h5>阿穆德纳圣母主教座堂</h5>
-                                        <p>全名马德里王家阿穆德纳圣母主教座堂，是天主教马德里总教没的主教座堂。</p>
-                                    </DetailActivitySpot>
-                                </Col>
-                            </Row>
+                            <div>
+                                <DetailPlace><div className="daysItem">D1</div><div className="name">马德里</div></DetailPlace>
+                                <DeatilEveryContent>整个马德里行程就从市中心太阳门广场SOL开始，太阳门广场是马德里的中心。参观完太阳门广场后我们继续前往马约尔广场无疑是最有广场范儿的。步行一刻钟到，马德里皇宫与阿穆德纳圣母主教座堂。吃完了午上后我们重新踏马德里探索之旅，前往我们的下一个目的地Gran Vía大道以及Callao广场。</DeatilEveryContent>
+                                <Row gutter={24} type="flex">
+                                    <Col span={12}>
+                                        <DetailActivitySpot>
+                                            <img src="http://cnd.05121818.com/1cfebcf7-10da-4e68-b78e-d3d72f9a53db.jpg" alt="" />
+                                            <h5>太阳门广场</h5>
+                                            <p>太阳门广场是马德里的中心。最初太阳门广场旁有一个太阳门，因为它面向太阳升起的地方，所以取名为太阳门。</p>
+                                        </DetailActivitySpot>
+                                    </Col>
+                                    <Col span={12}>
+                                        <DetailActivitySpot>
+                                            <img src="http://cnd.05121818.com/b9ef10cd-810c-4405-9845-b9ee1085f057.jpg" alt="" />
+                                            <h5>马约尔广场</h5>
+                                            <p>在西班牙众多广场中，马约尔广场无疑是最有广场范儿的。</p>
+                                        </DetailActivitySpot>
+                                    </Col>
+                                    <Col span={12}>
+                                        <DetailActivitySpot>
+                                            <img src="http://cnd.05121818.com/1cfebcf7-10da-4e68-b78e-d3d72f9a53db.jpg" alt="" />
+                                            <h5>马德里皇宫</h5>
+                                            <p>该皇宫是仅次于凡尔赛宫和维也纳美泉宫的欧洲第三大皇宫，是世界上保存最完整而且最精美的宫殿之一。</p>
+                                        </DetailActivitySpot>
+                                    </Col>
+                                    <Col span={12}>
+                                        <DetailActivitySpot>
+                                            <img src="http://cnd.05121818.com/b9ef10cd-810c-4405-9845-b9ee1085f057.jpg" alt="" />
+                                            <h5>阿穆德纳圣母主教座堂</h5>
+                                            <p>全名马德里王家阿穆德纳圣母主教座堂，是天主教马德里总教没的主教座堂。</p>
+                                        </DetailActivitySpot>
+                                    </Col>
+                                </Row>
+                            </div>
+                            <div>
+                                <DetailPlace><div className="daysItem">D2</div><div className="name">马德里</div></DetailPlace>
+                                <DeatilEveryContent>整个马德里行程就从市中心太阳门广场SOL开始，太阳门广场是马德里的中心。参观完太阳门广场后我们继续前往马约尔广场无疑是最有广场范儿的。步行一刻钟到，马德里皇宫与阿穆德纳圣母主教座堂。吃完了午上后我们重新踏马德里探索之旅，前往我们的下一个目的地Gran Vía大道以及Callao广场。</DeatilEveryContent>
+                                <Row gutter={24} type="flex">
+                                    <Col span={12}>
+                                        <DetailActivitySpot>
+                                            <img src="http://cnd.05121818.com/1cfebcf7-10da-4e68-b78e-d3d72f9a53db.jpg" alt="" />
+                                            <h5>太阳门广场</h5>
+                                            <p>太阳门广场是马德里的中心。最初太阳门广场旁有一个太阳门，因为它面向太阳升起的地方，所以取名为太阳门。</p>
+                                        </DetailActivitySpot>
+                                    </Col>
+                                    <Col span={12}>
+                                        <DetailActivitySpot>
+                                            <img src="http://cnd.05121818.com/b9ef10cd-810c-4405-9845-b9ee1085f057.jpg" alt="" />
+                                            <h5>马约尔广场</h5>
+                                            <p>在西班牙众多广场中，马约尔广场无疑是最有广场范儿的。</p>
+                                        </DetailActivitySpot>
+                                    </Col>
+                                    <Col span={12}>
+                                        <DetailActivitySpot>
+                                            <img src="http://cnd.05121818.com/1cfebcf7-10da-4e68-b78e-d3d72f9a53db.jpg" alt="" />
+                                            <h5>马德里皇宫</h5>
+                                            <p>该皇宫是仅次于凡尔赛宫和维也纳美泉宫的欧洲第三大皇宫，是世界上保存最完整而且最精美的宫殿之一。</p>
+                                        </DetailActivitySpot>
+                                    </Col>
+                                    <Col span={12}>
+                                        <DetailActivitySpot>
+                                            <img src="http://cnd.05121818.com/b9ef10cd-810c-4405-9845-b9ee1085f057.jpg" alt="" />
+                                            <h5>阿穆德纳圣母主教座堂</h5>
+                                            <p>全名马德里王家阿穆德纳圣母主教座堂，是天主教马德里总教没的主教座堂。</p>
+                                        </DetailActivitySpot>
+                                    </Col>
+                                </Row>
+                            </div>
+                            <div>
+                                <DetailPlace><div className="daysItem">D3</div><div className="name">马德里</div></DetailPlace>
+                                <DeatilEveryContent>整个马德里行程就从市中心太阳门广场SOL开始，太阳门广场是马德里的中心。参观完太阳门广场后我们继续前往马约尔广场无疑是最有广场范儿的。步行一刻钟到，马德里皇宫与阿穆德纳圣母主教座堂。吃完了午上后我们重新踏马德里探索之旅，前往我们的下一个目的地Gran Vía大道以及Callao广场。</DeatilEveryContent>
+                                <Row gutter={24} type="flex">
+                                    <Col span={12}>
+                                        <DetailActivitySpot>
+                                            <img src="http://cnd.05121818.com/1cfebcf7-10da-4e68-b78e-d3d72f9a53db.jpg" alt="" />
+                                            <h5>太阳门广场</h5>
+                                            <p>太阳门广场是马德里的中心。最初太阳门广场旁有一个太阳门，因为它面向太阳升起的地方，所以取名为太阳门。</p>
+                                        </DetailActivitySpot>
+                                    </Col>
+                                    <Col span={12}>
+                                        <DetailActivitySpot>
+                                            <img src="http://cnd.05121818.com/b9ef10cd-810c-4405-9845-b9ee1085f057.jpg" alt="" />
+                                            <h5>马约尔广场</h5>
+                                            <p>在西班牙众多广场中，马约尔广场无疑是最有广场范儿的。</p>
+                                        </DetailActivitySpot>
+                                    </Col>
+                                    <Col span={12}>
+                                        <DetailActivitySpot>
+                                            <img src="http://cnd.05121818.com/1cfebcf7-10da-4e68-b78e-d3d72f9a53db.jpg" alt="" />
+                                            <h5>马德里皇宫</h5>
+                                            <p>该皇宫是仅次于凡尔赛宫和维也纳美泉宫的欧洲第三大皇宫，是世界上保存最完整而且最精美的宫殿之一。</p>
+                                        </DetailActivitySpot>
+                                    </Col>
+                                    <Col span={12}>
+                                        <DetailActivitySpot>
+                                            <img src="http://cnd.05121818.com/b9ef10cd-810c-4405-9845-b9ee1085f057.jpg" alt="" />
+                                            <h5>阿穆德纳圣母主教座堂</h5>
+                                            <p>全名马德里王家阿穆德纳圣母主教座堂，是天主教马德里总教没的主教座堂。</p>
+                                        </DetailActivitySpot>
+                                    </Col>
+                                </Row>
+                            </div>
                         </DetailActivity>
                     </DetailMain>
                 </DetailWrapper>
