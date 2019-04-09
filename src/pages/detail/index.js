@@ -30,18 +30,19 @@ import { actionCreators } from './store';
 
 class Detail extends PureComponent {
     render () {
+        const {imgUrl,destination,days,line,feature,hotal,activities,price,people,everyday} = this.props;
         return (
             <div>
                 <DetailWrapper>
-                    <PageNav page="/evaluation" content="德国旅游" />
+                    <PageNav page="/evaluation" content={destination} />
                     <DetailTop>
                         <DetailSlick>
-                            <img src="http://cnd.05121818.com/ba047ac2-1c21-4809-a698-cd30eae2fc6c.jpg" alt=""/>
+                            <img src={imgUrl} alt=""/>
                         </DetailSlick>
                         <DetailTopRight>
                             <RightList>
                                 <RightListName>行程天数</RightListName>
-                                <RightListContent>15天14晚</RightListContent>
+                                <RightListContent>{days}天{days-1}晚</RightListContent>
                             </RightList>
                             <RightList>
                                 <RightListName>出发地</RightListName>
@@ -49,17 +50,17 @@ class Detail extends PureComponent {
                             </RightList>
                             <RightList>
                                 <RightListName>目的地</RightListName>
-                                <RightListContent>柏林+莱比锡+纽约堡+慕尼黑+斯图拉特+路德维希堡+斯图拉特+黑欣根+斯图拉特+法兰克福+科隆+明斯特+汉堡+柏林+国内</RightListContent>
+                                <RightListContent>{line}</RightListContent>
                             </RightList>
                             <DetailTopPrice>
                                 <div className="price">
-                                    <span className="greenFont">14500</span>元/人起
+                                    <span className="greenFont">{price}</span>元/人起
                                     <div className="smallFont">费用说明</div>
                                 </div>
                             </DetailTopPrice>
                             <LineItemOther>
-                                <div className="hotal"><span className="iconfont">&#xe64c;</span>酒店：舒适型</div>
-                                <div className="num"><span className="iconfont">&#xe62a;</span>景点活动：63</div>
+                                <div className="hotal"><span className="iconfont">&#xe64c;</span>酒店：{hotal}</div>
+                                <div className="num"><span className="iconfont">&#xe62a;</span>景点活动：{activities}</div>
                             </LineItemOther>
                             <DetailGrayBox>
                                 <p>＊本产品天数为在目的地游玩天数，不包含国际段航班飞行时间。</p>
@@ -74,9 +75,9 @@ class Detail extends PureComponent {
                     <DetailMain>
                         <div className="title">行程方案</div>
                         <DeatilCase>
-                            <p>●  出行天数: 9天8晚</p>
-                            <p>●  出行人数: 2人起成团</p>
-                            <p>●  出行城市: 马德里+塞戈维亚+巴塞罗那+国内</p>
+                            <p>●  出行天数: {days}天{days-1}晚</p>
+                            <p>●  出行人数: {people}人起成团</p>
+                            <p>●  出行城市: {line}</p>
                             <p>●  公司总部位于欧洲大都市马德里，我们掌握最地道的当地特色旅游体验资源，欧洲当地中文客服无时差及时的服务，欧洲旅行定制师丰富的经验，确保行程定制的科学合理，结合当地文化习俗，保障最佳的旅行体验</p>
                             <h4>扫二维码即可获取报价</h4>
                             <p>●  报价包含: </p>
@@ -90,11 +91,9 @@ class Detail extends PureComponent {
                         </DeatilCase>
                         <DetailDaysTotal>
                             <div className="line"></div>
-                            <div className="daysItem">D1</div>
-                            <div className="daysItem">D2</div>
-                            <div className="daysItem">D3</div>
-                            <div className="daysItem">D4</div>
-                            <div className="daysItem">D5</div>
+                            <div>
+                                {this.daysItem()}
+                            </div>
                         </DetailDaysTotal>
                         <DetailActivity>
                             <div className="line"></div>
@@ -208,17 +207,30 @@ class Detail extends PureComponent {
     }
 
     componentDidMount() {
-        console.log(this.props.match.params.id);
-        this.props.getDetail();
+        // console.log(this.props.match.params.id);
+        this.props.getDetail(this.props.match.params.id);
 	}
 }
 
+const mapState = (state) => ({
+    imgUrl:state.getIn(['detail','imgUrl']),
+    destination:state.getIn(['detail','destination']),
+    days:state.getIn(['detail','days']),
+    line:state.getIn(['detail','line']),
+    feature:state.getIn(['detail','feature']),
+    hotal:state.getIn(['detail','hotal']),
+    activities:state.getIn(['detail','activities']),
+    price:state.getIn(['detail','price']),
+    people:state.getIn(['detail','people']),
+    everyday:state.getIn(['detail','everyday'])
+})
+
 const mapDispatch = (dispatch) => {
     return {
-        getDetail(){
-            dispatch(actionCreators.get_detail())
+        getDetail(id){
+            dispatch(actionCreators.get_detail(id))
         }
     }
 }
 
-export default connect(null,mapDispatch)(withRouter(Detail));
+export default connect(mapState,mapDispatch)(withRouter(Detail));

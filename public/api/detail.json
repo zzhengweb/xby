@@ -2,14 +2,14 @@
 	"success": true,
 	"data": [{
         "imgUrl":"http://cnd.05121818.com/5cbfc6c5-459f-431c-9498-6f6edbf87ea6.jpg",
-        "destination":["Spain"],
+        "destination":["西班牙"],
         "title":"西班牙艺术之都马德里 定制案例",
-		"days":"19",
+		"days":"6",
         "line":"马德里+塞戈维亚+巴塞罗那+国内",
         "feature":["世界上最大斗牛场","弗拉门戈舞","美味海鲜饭","高迪最美建筑","打折村购物"],
         "hotal":"舒适型",
         "activities":"30",
-		"peice":"9980",
+		"price":"9980",
 		"people": "2",
 		"everyday": [{
 			"id":1,
